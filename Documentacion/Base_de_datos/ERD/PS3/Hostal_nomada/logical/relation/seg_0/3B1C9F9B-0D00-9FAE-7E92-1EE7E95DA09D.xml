@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_6" directorySegmentName="seg_0" id="3B1C9F9B-0D00-9FAE-7E92-1EE7E95DA09D">
+<createdBy>rmichelv</createdBy>
+<createdTime>2024-09-10 20:41:07 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<sourcePk>B8B7B0E1-67E0-8755-57D8-B610AB2C85F5</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>realizar</nameOnSource>
+<nameOnTarget>hecha</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>07279D77-877D-F0B9-35D7-18541A2CB5D6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D0160EEF-1B48-F425-FEA1-07EECB46AA0F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

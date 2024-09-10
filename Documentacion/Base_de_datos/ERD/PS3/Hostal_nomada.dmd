@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Hostal_nomada" id="40ED3767-0B29-6CD1-575F-14ABBC34BA61" version="3.5">
+<createdBy>rmichelv</createdBy>
+<createdTime>2024-09-10 16:55:42 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>40ED3767-0B29-6CD1-575F-14ABBC34BA61</designId>
+</OSDM_Design>

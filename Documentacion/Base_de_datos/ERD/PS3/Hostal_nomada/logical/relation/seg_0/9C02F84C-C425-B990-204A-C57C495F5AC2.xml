@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_82" directorySegmentName="seg_0" id="9C02F84C-C425-B990-204A-C57C495F5AC2">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:20:22 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<sourcePk>C62691F3-1354-F78D-F0BE-7E1E7FC31436</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>pertenece</nameOnSource>
+<nameOnTarget>tiene</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>66D88DA8-D7D1-6FEB-1BA9-9910F301EEB0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C2E87131-420C-36DF-CD1A-8448E90B4913</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

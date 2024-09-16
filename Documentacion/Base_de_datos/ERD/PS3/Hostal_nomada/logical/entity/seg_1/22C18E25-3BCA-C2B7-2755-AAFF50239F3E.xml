@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_1" id="22C18E25-3BCA-C2B7-2755-AAFF50239F3E" name="room inputs">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>33CD8605-5577-97CE-7366-4CB72F61FCF5</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idroom inputs" id="AE8A5890-52CE-DAA2-EF65-558ADA8C591C">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>C2945068-E2A3-3F86-074F-01DA9CB8525B</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rooms id" id="171DF6A0-E3D9-9DC9-8414-21513857EF63">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>A3F92250-3F2F-4699-CCC0-6D319D8A77E1</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<referedAttribute>89769263-A320-3A99-BA4C-59BCD8EBE7C8</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="inputs id" id="20F1A38F-D75F-D76F-3621-D0BC407AAC2A">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>6CD7A299-8AED-BF45-0123-6DE996733F22</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<referedAttribute>5A2B7713-1D22-AD01-138A-BD691F332632</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B03FFAEE-654C-D015-5D12-B8FDFB8A9C6F" name="room inputs PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>F6C29C36-5598-3770-F048-B77A1348E167</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AE8A5890-52CE-DAA2-EF65-558ADA8C591C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

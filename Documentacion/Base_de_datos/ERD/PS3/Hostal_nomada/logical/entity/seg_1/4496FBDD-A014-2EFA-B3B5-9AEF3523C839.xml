@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_1" id="4496FBDD-A014-2EFA-B3B5-9AEF3523C839" name="reservations">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>11D84A3E-7D9D-0685-0E21-0C4A4D08F132</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="3FC606C5-035A-E913-0BD6-8DD11720C8B3">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>87855135-358F-CA94-942F-CF02F23F59AA</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date time" id="130196C2-453D-4606-5524-DB414090B362">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>E4569ACA-77F9-6AC2-454C-67CD6330F040</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>FEB54AF0-C01B-FB2D-CF44-FEC534E407CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="entry date" id="263432C6-F7C7-EBFF-7E56-DEE94326DA52">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>27E4D1A6-142B-A2E1-7381-16EB388CB89D</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>85C678E9-F787-9610-C8B8-98A6A3C2D364</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="depature date" id="81064831-7FE8-DBDC-DF91-ADF65E534A8D">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>349CC31C-B908-0DCB-138F-05551643080D</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>85C678E9-F787-9610-C8B8-98A6A3C2D364</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="users id" id="07788D8C-485D-F2C9-74A2-8C48024EBB32">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>2BF55B96-F2AF-DF71-2D1E-DA4F278D67C8</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<referedAttribute>E1E19255-7F2A-D67F-FF8F-CB0A5902589D</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status id" id="28C1FF71-7C26-E743-78D8-01AD5DC8A8E9">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>28E04E9D-6C21-BEC0-FD04-57FC15575C4F</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<referedAttribute>8166A2B4-107A-5C9A-7A10-3C0C019586B5</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8924ED27-A588-3D66-10BB-70F893055BFA" name="reservations PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>7D9811F4-AD52-D78D-9A1A-196C27C98468</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3FC606C5-035A-E913-0BD6-8DD11720C8B3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

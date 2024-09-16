@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A6E25B67-37F5-4F7A-4FDE-2B241BDB2AF3" containerWithKeyObject="440A254E-19AE-E9C4-C34C-7AFE83C5822A" localFKIndex="5C0F2DC4-4AE8-D0D5-0B0F-87D073D84E28" name="people_nacionalities_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>5E67947C-1B2F-7C26-07A7-CFC96166F804</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<referredTableLongName>nacionalities</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>50BE7A29-043F-6DA4-C8DD-4753AD26CC6E</referredTableID>
+<keyObject>348D2F67-3FBA-2FC6-6D35-AFFEEECA52E4</keyObject>
+<referredKeyID>348D2F67-3FBA-2FC6-6D35-AFFEEECA52E4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

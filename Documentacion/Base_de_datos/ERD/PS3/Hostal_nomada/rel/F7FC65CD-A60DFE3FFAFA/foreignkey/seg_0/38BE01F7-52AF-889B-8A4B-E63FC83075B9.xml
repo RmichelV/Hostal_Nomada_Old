@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="38BE01F7-52AF-889B-8A4B-E63FC83075B9" containerWithKeyObject="E740383D-0195-6D49-A1AD-BD0C51F9E334" localFKIndex="4C71C3B7-7CC6-E4C0-53A2-06C1566E0300" name="reservations_status_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>28E04E9D-6C21-BEC0-FD04-57FC15575C4F</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<referredTableLongName>status</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FADFA886-B554-0A6A-9517-3B9270A6E7BE</referredTableID>
+<keyObject>D8662EB6-D912-D35E-DC87-3DFEBA4261A4</keyObject>
+<referredKeyID>D8662EB6-D912-D35E-DC87-3DFEBA4261A4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

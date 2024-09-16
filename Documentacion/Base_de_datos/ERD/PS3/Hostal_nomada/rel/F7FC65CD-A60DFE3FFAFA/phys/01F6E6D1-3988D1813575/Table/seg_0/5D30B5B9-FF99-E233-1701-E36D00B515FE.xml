@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="room_services" directorySegmentName="seg_0" id="5D30B5B9-FF99-E233-1701-E36D00B515FE">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="name" id="03FBC2FA-0DFC-DA6D-C5FE-015CBC9FD0FE">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="services_id" id="0C3FB2D3-114B-62DA-3D38-5D7D80D298F8">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="rooms_id" id="333A90A4-C1E1-5450-6AAB-5AD9E9EC43A3">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="amount" id="6D3D167B-969A-EB70-9141-963E5CDF4FD3">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="F50BCF95-A6A6-166D-0D90-271C5ABDD6AF">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="room_services_rooms_FK" id="847864CC-A38F-071D-BF30-A6B2CCC64543">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="room_services_services_FK" id="9B35CBC2-DDAF-7A31-FBEC-2823435332ED">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="room_services_PK" id="83B9FB60-20B4-79B3-2BF7-3CDCE76EDD8A">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

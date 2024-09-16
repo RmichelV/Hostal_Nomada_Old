@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="users" directorySegmentName="seg_0" id="E234C420-B19C-19AE-5633-48168A9DAA88">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id" id="06C1871A-F406-B58B-D3B8-637EF6E1ED79">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="rols_id" id="1A08F1ED-04FD-4573-F2B3-46DF4ACA995B">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="email" id="5CF6D019-7EC1-E5C5-894B-73F18B4E37A2">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="name" id="BD9DE864-7051-D7E0-81C2-0877DE87848F">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="password" id="D90D0C25-350C-E6CD-3715-097BD37A2D3A">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="users_rols_FK" id="2BBC39E7-7F55-C2CB-5C6A-5C487B06FBDB">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="users_PK" id="0C0425B3-ED5B-564C-9866-03DF04FFE931">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

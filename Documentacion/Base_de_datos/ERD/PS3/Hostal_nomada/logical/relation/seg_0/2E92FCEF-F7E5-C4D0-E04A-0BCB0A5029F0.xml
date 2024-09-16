@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="room_services_services_FK" directorySegmentName="seg_0" id="2E92FCEF-F7E5-C4D0-E04A-0BCB0A5029F0">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>9D2F9680-26B0-C862-4E4B-B465CD73F68F</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<sourcePk>6C8BC0FC-622D-A337-71CC-CA35C8935AEB</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>30D399B2-483F-344E-719C-A0E4E5A259FE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F49C95A2-E3B8-4E1B-6A8C-E967254E2F3E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

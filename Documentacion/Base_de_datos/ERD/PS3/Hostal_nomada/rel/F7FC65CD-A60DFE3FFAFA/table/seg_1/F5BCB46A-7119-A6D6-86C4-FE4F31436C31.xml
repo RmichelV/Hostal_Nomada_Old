@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="F5BCB46A-7119-A6D6-86C4-FE4F31436C31" name="checks">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>B8CB316E-99F5-C8C2-F3A5-FEEDDC3D9386</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idchecks" id="8CCADA60-3EDB-588A-5A1B-D4698AEE1393">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>408B5FC1-677E-6983-4FAA-8C4AC901FA5F</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_time" id="BB63D2E8-DCBE-10E2-8543-80D2FA9D33BE">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>43824C55-ACD4-B79E-3657-A68A86264B60</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>FEB54AF0-C01B-FB2D-CF44-FEC534E407CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="type" id="4F757A2C-14CD-DABE-98DE-B8D7A79EB1FE">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>CAEE7471-F7BF-898F-612A-CBB7446EDCC4</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reservations_id" id="A631F587-4410-5BB6-3E2E-8ADB1C2BD923">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>57B8F7E6-EDD6-CD8F-9ABE-6BA28D67E4E5</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="226030E3-AACB-1479-D8D5-4BD36049B71C" referredColumn="7000E6C2-A343-A555-A169-33650B2B6CAD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8F681515-13D4-18BD-EAE7-C19466289E28" name="checks_PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>3EEC0186-7890-D470-7E47-EEE13D5318A4</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CCADA60-3EDB-588A-5A1B-D4698AEE1393"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14A8458F-BF12-263F-CE53-F2AFC20347D9" name="checks_reservations_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>2FA051AC-AB40-AE86-BEA4-48009DED3BE3</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A631F587-4410-5BB6-3E2E-8ADB1C2BD923"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

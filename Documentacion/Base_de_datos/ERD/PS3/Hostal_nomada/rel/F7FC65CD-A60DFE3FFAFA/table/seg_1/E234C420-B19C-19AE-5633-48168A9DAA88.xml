@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="E234C420-B19C-19AE-5633-48168A9DAA88" name="users">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>E6074FCA-A2B8-6782-9E1B-65B3AAF766C0</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="06C1871A-F406-B58B-D3B8-637EF6E1ED79">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>E1E19255-7F2A-D67F-FF8F-CB0A5902589D</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="BD9DE864-7051-D7E0-81C2-0877DE87848F">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>0AAEBA73-9345-6B25-36DE-E20F466C8615</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="5CF6D019-7EC1-E5C5-894B-73F18B4E37A2">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>BFEEDECA-C0A6-268C-F7F0-98AC108F1D95</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="D90D0C25-350C-E6CD-3715-097BD37A2D3A">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>9C044AFD-89F3-EB06-60D3-760D9E621D90</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rols_id" id="1A08F1ED-04FD-4573-F2B3-46DF4ACA995B">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>000F0A78-6821-2B27-D9CB-EBE6EB3E3AD9</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="777ED6E3-2DA1-79ED-1E87-F5850148D6A0" referredColumn="13FDF796-FD23-32A7-1C25-CEB079DA464B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C0425B3-ED5B-564C-9866-03DF04FFE931" name="users_PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>3DA28C66-9249-64B5-AF1C-8FEEB0FF14AE</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06C1871A-F406-B58B-D3B8-637EF6E1ED79"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2BBC39E7-7F55-C2CB-5C6A-5C487B06FBDB" name="users_rols_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>00E66F2F-257E-5506-ED1A-0A05A41E67DE</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A08F1ED-04FD-4573-F2B3-46DF4ACA995B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

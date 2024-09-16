@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_1" id="70895519-0DBC-D930-CDA3-D344C12F5362" name="rols">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>32A864E5-2653-140E-F2D0-8F4A5868E9A4</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="FF96F4EA-B164-43AF-E6DA-0D3D9C2759CF">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>FB79FD14-0C31-178D-39BF-C26B3EB1EAEB</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="B5609C43-B520-1DCF-BBCC-731A355A1767">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>CADFEAB3-40A7-86AD-603E-B54D543B8133</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BDEFD2A4-FC3D-7775-295C-56CF6969BE16" name="rols PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>E4A47949-E2D9-0D9F-3C64-3179BB83575E</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FF96F4EA-B164-43AF-E6DA-0D3D9C2759CF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

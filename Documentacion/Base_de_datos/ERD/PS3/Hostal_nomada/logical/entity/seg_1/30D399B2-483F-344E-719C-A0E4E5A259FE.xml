@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_1" id="30D399B2-483F-344E-719C-A0E4E5A259FE" name="services">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>BDFC8855-3256-6328-41B1-828DA5A2CCC6</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="AAE6D8EE-9077-A578-A2C5-FD40AA603317">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>B71CB561-57E2-BE18-FD2F-C4337A1088DB</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="2F857036-FC41-6542-F809-FF81CB249A9B">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>EEF7E5D6-4A40-FDC8-3C89-B25AE69456A8</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="description" id="A243C716-6342-FD5A-7149-AB0AFC68D618">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>0F42E65F-482A-F53C-A22B-E4158088CD84</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6C8BC0FC-622D-A337-71CC-CA35C8935AEB" name="services PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>3C83A281-52CE-9231-6A42-756F9AC764EB</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AAE6D8EE-9077-A578-A2C5-FD40AA603317</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="new_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Integer_0_0_0" id="577A98BE-517A-FCB1-EA70-CDD75F3FFFBA">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 01:18:25 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>new_Domains</fileName>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_45" id="61AFCEAB-3256-2E42-A18D-E8CBD9F383B7">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 01:18:25 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>45</dataTypeSize>
+<fileName>new_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="85C678E9-F787-9610-C8B8-98A6A3C2D364">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 01:18:25 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>new_Domains</fileName>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10" id="C2E03912-540D-F938-12A0-BC8DAEEAFFBA">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 01:18:25 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>10</dataTypeSize>
+<fileName>new_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="DECIMAL_10_2_0" id="D36E7DF3-301F-F251-967B-E223DB0C4661">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 01:18:25 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>new_Domains</fileName>
+<logicalDatatype>LOGDT026</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Timestamp_6_0_0" id="FEB54AF0-C01B-FB2D-CF44-FEC534E407CE">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 01:18:25 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>6</dataTypePrecision>
+<fileName>new_Domains</fileName>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>

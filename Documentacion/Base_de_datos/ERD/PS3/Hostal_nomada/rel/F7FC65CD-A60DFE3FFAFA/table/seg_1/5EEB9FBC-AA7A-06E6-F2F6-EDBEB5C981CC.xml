@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="5EEB9FBC-AA7A-06E6-F2F6-EDBEB5C981CC" name="shifts">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>66D88DA8-D7D1-6FEB-1BA9-9910F301EEB0</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C4F875C5-069F-9CE1-350F-0A37DD444673">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>BB354156-5536-F222-AE2E-7686D16E0074</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="DF6AF3FA-E7F0-3F10-3E1D-711CFDCC9919">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>8CAE4BE5-D6B8-6758-6718-DA0D26E77993</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salary" id="CB540E8D-2CE4-5DB4-62B7-F5BE308E8E9E">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>45E2527B-3FA3-5D6A-8E7D-655CD9880C0B</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4239D557-5262-16EA-6C04-B9CD3DD79E29" name="shifts_PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>C62691F3-1354-F78D-F0BE-7E1E7FC31436</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4F875C5-069F-9CE1-350F-0A37DD444673"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

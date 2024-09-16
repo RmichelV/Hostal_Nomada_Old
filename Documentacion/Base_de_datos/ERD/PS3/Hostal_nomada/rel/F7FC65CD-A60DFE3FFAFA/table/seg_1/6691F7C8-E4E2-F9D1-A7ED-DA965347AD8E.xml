@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="6691F7C8-E4E2-F9D1-A7ED-DA965347AD8E" name="inputs">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>321C1C95-9B2A-E941-AA62-260B2FCAC6D5</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B7B2E878-BBEA-41E0-CA14-275A689DF875">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>5A2B7713-1D22-AD01-138A-BD691F332632</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="8E519B03-5072-0246-18BB-5E4EE80291D7">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>DE82CAC6-ED8B-F046-3D6D-986C774E1E09</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0B4D5301-7FDE-BA4E-451C-9F7129051299" name="inputs_PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>CCFFBF30-5E81-627E-788C-A449176F8308</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7B2E878-BBEA-41E0-CA14-275A689DF875"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

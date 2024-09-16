@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="C9E1DCC9-EDDD-BBB5-560C-1B0CD68ED76C" name="room_inputs">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>22C18E25-3BCA-C2B7-2755-AAFF50239F3E</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idroom_inputs" id="BE65DEA2-3765-8776-AEF4-975F6D16FEF5">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>AE8A5890-52CE-DAA2-EF65-558ADA8C591C</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rooms_id" id="C9551933-6CA8-F349-1EC4-E6B96B9EC964">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>171DF6A0-E3D9-9DC9-8414-21513857EF63</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="345C9547-2987-37F7-0E0B-625319F7449B" referredColumn="7D317294-2E73-1D8B-5C9F-7B237306FC2C"/>
+</associations>
+</Column>
+<Column name="inputs_id" id="169E8AC6-1F56-4480-4297-B9A5B573C425">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>20F1A38F-D75F-D76F-3621-D0BC407AAC2A</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87F1B79D-64D6-0B8D-5368-DFCC4DBC1059" referredColumn="B7B2E878-BBEA-41E0-CA14-275A689DF875"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3F1D3C16-7A9B-7E19-AB9F-2C7FFF5AF3F5" name="room_inputs_PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>B03FFAEE-654C-D015-5D12-B8FDFB8A9C6F</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE65DEA2-3765-8776-AEF4-975F6D16FEF5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E54148D-370D-49AA-31EA-F3385D71ACFE" name="room_inputs_inputs_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>6CD7A299-8AED-BF45-0123-6DE996733F22</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="169E8AC6-1F56-4480-4297-B9A5B573C425"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B923B0F-A492-ED67-B19E-7DDE36ED9B25" name="room_inputs_rooms_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>A3F92250-3F2F-4699-CCC0-6D319D8A77E1</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9551933-6CA8-F349-1EC4-E6B96B9EC964"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

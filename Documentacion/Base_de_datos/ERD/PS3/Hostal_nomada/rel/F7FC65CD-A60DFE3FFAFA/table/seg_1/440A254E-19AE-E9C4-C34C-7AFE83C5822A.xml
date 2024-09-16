@@ -1,0 +1,173 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="440A254E-19AE-E9C4-C34C-7AFE83C5822A" name="people">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>C2E87131-420C-36DF-CD1A-8448E90B4913</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F4E5D995-CADE-DA30-15EF-A45964A448C7">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>73624210-C65E-A23A-D378-F805854F6C5D</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ci" id="2DB9220F-6FA8-46F0-203C-445CC3E319AF">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>9DE86EE3-CEB2-4B8B-B09F-ACD0561850AF</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>C2E03912-540D-F938-12A0-BC8DAEEAFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="5D4BB8F6-2C41-E874-BA7A-AEB341EB6529">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>28650D1C-EECA-A1BC-7A49-40150777FD05</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lastname" id="CC646219-1335-7E30-792A-8C40B06DFD89">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>0408177B-A8F9-7C2F-B96B-B9D956C5EA2A</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>C2E03912-540D-F938-12A0-BC8DAEEAFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone" id="A2457832-3834-AB1F-865C-AA38D9D59EB8">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>F6CFBFBF-29FD-B713-96F2-A6E5309E3631</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>C2E03912-540D-F938-12A0-BC8DAEEAFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="A2D64C78-D8B0-EA5A-1846-664AECE89CC8">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>BCF269BD-42CF-BB52-E9A5-5C855C21E5CA</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="users_id" id="C8F08B70-D626-B5B0-3197-A30415B01BE6">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>AE23337A-600C-E579-ED5F-D9D55B43FF80</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="30682E41-332B-68B5-A3FF-4BE0892C389D" referredColumn="06C1871A-F406-B58B-D3B8-637EF6E1ED79"/>
+</associations>
+</Column>
+<Column name="nacionalities_id" id="2E172690-D495-8A15-EAA4-D91868E736A4">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>FE691E59-4B9A-ABC8-63F2-5185F441DA31</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A6E25B67-37F5-4F7A-4FDE-2B241BDB2AF3" referredColumn="7CD28E6E-8FF8-2BE1-F5DE-E9F4B2D7B4F6"/>
+</associations>
+</Column>
+<Column name="shifts_id" id="C1C106E1-4F7D-17D3-C5C4-05EBC601B38F">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>DA56D9C5-F4F4-F2A8-BE5A-11FDF22C86B3</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E84309CA-3029-122E-7C73-BFBDA05C6181" referredColumn="C4F875C5-069F-9CE1-350F-0A37DD444673"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="027119F5-CCDA-C5C2-83B2-4E046BBBB2DE" name="people_PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>60775BCD-19C1-FB7B-E504-D98B927FCC54</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F4E5D995-CADE-DA30-15EF-A45964A448C7"/>
+<colUsage columnID="C1C106E1-4F7D-17D3-C5C4-05EBC601B38F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5C0F2DC4-4AE8-D0D5-0B0F-87D073D84E28" name="people_nacionalities_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>5E67947C-1B2F-7C26-07A7-CFC96166F804</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E172690-D495-8A15-EAA4-D91868E736A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E204CEC9-355D-75C3-D490-19442EACD7D9" name="people_users_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>6F156A9F-FF2A-72AF-A8D0-7ACD427F1DFC</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8F08B70-D626-B5B0-3197-A30415B01BE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E76773D7-5162-9207-F0DD-BF3466C91899" name="people_shifts_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>9C02F84C-C425-B990-204A-C57C495F5AC2</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1C106E1-4F7D-17D3-C5C4-05EBC601B38F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

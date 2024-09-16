@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="people" directorySegmentName="seg_0" id="440A254E-19AE-E9C4-C34C-7AFE83C5822A">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ci" id="2DB9220F-6FA8-46F0-203C-445CC3E319AF">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nacionalities_id" id="2E172690-D495-8A15-EAA4-D91868E736A4">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="name" id="5D4BB8F6-2C41-E874-BA7A-AEB341EB6529">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="phone" id="A2457832-3834-AB1F-865C-AA38D9D59EB8">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="address" id="A2D64C78-D8B0-EA5A-1846-664AECE89CC8">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="shifts_id" id="C1C106E1-4F7D-17D3-C5C4-05EBC601B38F">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="users_id" id="C8F08B70-D626-B5B0-3197-A30415B01BE6">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="lastname" id="CC646219-1335-7E30-792A-8C40B06DFD89">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="F4E5D995-CADE-DA30-15EF-A45964A448C7">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="people_nacionalities_FK" id="5C0F2DC4-4AE8-D0D5-0B0F-87D073D84E28">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="people_users_FK" id="E204CEC9-355D-75C3-D490-19442EACD7D9">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="people_shifts_FK" id="E76773D7-5162-9207-F0DD-BF3466C91899">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="people_PK" id="027119F5-CCDA-C5C2-83B2-4E046BBBB2DE">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

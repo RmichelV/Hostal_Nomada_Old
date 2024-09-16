@@ -3,6 +3,13 @@
 <createdBy>rmichelv</createdBy>
 <createdTime>2024-09-10 16:55:46 UTC</createdTime>
 <ownerDesignName>Hostal_nomada</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>new.sql</fileName>
+<pathName>D:\PROY_FINAL-6to</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
 </relationalModel>

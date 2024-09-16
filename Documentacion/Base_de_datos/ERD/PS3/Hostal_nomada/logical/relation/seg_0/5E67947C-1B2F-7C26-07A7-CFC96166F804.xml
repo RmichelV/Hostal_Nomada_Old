@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="people_nacionalities_FK" directorySegmentName="seg_0" id="5E67947C-1B2F-7C26-07A7-CFC96166F804">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>222E636A-02FC-D9C1-3A4E-A4B866E4B7C2</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<sourcePk>9147D0EB-08C2-B658-71D3-06243D64A077</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>334BDF49-CDC5-8408-94A4-A80510121B1E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C2E87131-420C-36DF-CD1A-8448E90B4913</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

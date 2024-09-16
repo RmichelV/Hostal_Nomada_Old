@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="users_rols_FK" directorySegmentName="seg_0" id="00E66F2F-257E-5506-ED1A-0A05A41E67DE">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:19:47 UTC</createdTime>
+<generatorID>8C8DB10B-46C4-15E8-6078-93D143E26E86</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<engineerTo>
+<item key="F7FC65CD-A54E-8C63-A0D0-A60DFE3FFAFA" value="true"/>
+</engineerTo>
+<sourcePk>BDEFD2A4-FC3D-7775-295C-56CF6969BE16</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>70895519-0DBC-D930-CDA3-D344C12F5362</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E6074FCA-A2B8-6782-9E1B-65B3AAF766C0</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

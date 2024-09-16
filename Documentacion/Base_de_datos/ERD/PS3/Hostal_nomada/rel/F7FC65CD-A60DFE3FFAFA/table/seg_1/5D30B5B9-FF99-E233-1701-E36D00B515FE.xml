@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="5D30B5B9-FF99-E233-1701-E36D00B515FE" name="room_services">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>F49C95A2-E3B8-4E1B-6A8C-E967254E2F3E</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F50BCF95-A6A6-166D-0D90-271C5ABDD6AF">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>F90587A5-EB6E-B30B-6F86-78C69930D29E</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="03FBC2FA-0DFC-DA6D-C5FE-015CBC9FD0FE">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>668EE43F-2E76-448A-E611-8A14DADFA649</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>61AFCEAB-3256-2E42-A18D-E8CBD9F383B7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="amount" id="6D3D167B-969A-EB70-9141-963E5CDF4FD3">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>D7566091-01F7-A775-3218-B25F2B892505</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>D36E7DF3-301F-F251-967B-E223DB0C4661</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rooms_id" id="333A90A4-C1E1-5450-6AAB-5AD9E9EC43A3">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>A92FD067-CC2C-7A89-14A2-12BC0757C8AA</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6A2FCB3E-58DB-1DCA-E7E8-3AD4AADB8DA6" referredColumn="7D317294-2E73-1D8B-5C9F-7B237306FC2C"/>
+</associations>
+</Column>
+<Column name="services_id" id="0C3FB2D3-114B-62DA-3D38-5D7D80D298F8">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>BDE578A3-413E-C0CC-849F-511988B5B13B</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>577A98BE-517A-FCB1-EA70-CDD75F3FFFBA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5881C0A4-CE6F-7E77-C738-2CC2178E8CDB" referredColumn="C7D5DE4C-AB44-6436-0186-7A1E714D13C3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="83B9FB60-20B4-79B3-2BF7-3CDCE76EDD8A" name="room_services_PK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>DC040319-E5B9-F632-3006-24AA03808D2F</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F50BCF95-A6A6-166D-0D90-271C5ABDD6AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="847864CC-A38F-071D-BF30-A6B2CCC64543" name="room_services_rooms_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>CB8AD886-8DE8-1530-92AE-3976B2549446</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="333A90A4-C1E1-5450-6AAB-5AD9E9EC43A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B35CBC2-DDAF-7A31-FBEC-2823435332ED" name="room_services_services_FK">
+<createdBy>MSI</createdBy>
+<createdTime>2024-09-12 02:21:55 UTC</createdTime>
+<generatorID>2E92FCEF-F7E5-C4D0-E04A-0BCB0A5029F0</generatorID>
+<ownerDesignName>Hostal_nomada</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C3FB2D3-114B-62DA-3D38-5D7D80D298F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

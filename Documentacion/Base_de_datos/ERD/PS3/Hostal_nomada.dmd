@@ -5,4 +5,12 @@
 <ownerDesignName>Hostal_nomada</ownerDesignName>
 <capitalNames>false</capitalNames>
 <designId>40ED3767-0B29-6CD1-575F-14ABBC34BA61</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="76A616D3-5287-AAE3-2732-F55DD2E03C2B">
+<designStoragePath>E:\new</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="D81502A0-35EC-8B12-D5AF-5F2D1BC353DA">
+<designStoragePath>E:\new</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
 </OSDM_Design>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\rol;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class RolController extends Controller
 {
@@ -12,7 +13,9 @@ class RolController extends Controller
      */
     public function index()
     {
-        //
+        $rols = rol::all();
+
+        return response()->json($rols, 200);
     }
 
     /**
@@ -28,7 +31,40 @@ class RolController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = validator::make($request->all(),[
+            'nombre'=>'required',
+        ]);
+
+        if($validator->fails()){
+            $data=[
+                'messege'=>'Error en la validación de datos',
+                'errors'=> $validator->errors(),
+                'status'=>400
+            ];
+            return response()->json($data,400);
+        }
+
+        $rols =  rol::create([
+            'nombre'=> $request->nombre,
+
+
+        ]);
+
+        if(!$rols){
+            $data=[
+                'messege'=>'Error al crear el usuario',
+                'status'=> 500
+            ];
+
+            return response()->json($data,500);
+        }
+
+        $data = [
+            'rols'=> $rols,
+            'status'=> 201
+        ];
+
+        return response()->json($data,201);
     }
 
     /**

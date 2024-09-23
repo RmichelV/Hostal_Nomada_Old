@@ -115,8 +115,10 @@ class UserController extends Controller
             return response()->json($data,500);
         }
 
+
         $data = [
             'users'=> $users,
+            'message'=>'usuario agregado correctamente',
             'status'=> 201
         ];
 
@@ -242,11 +244,12 @@ class UserController extends Controller
         $data = [
             'message'=>'Usuario Actualizado',
             'users'=> $users,
-            'status'=> 201
+            'status'=> 202
         ];
 
-        return response()->json($data,201);
+        return response()->json($data,202);
     }
+    
     public function updatePartial(Request $request, $id)
     {
         $users= User::find($id);
@@ -299,9 +302,9 @@ class UserController extends Controller
             $data=[
                 'message'=>'Error en la validación de datos',
                 'errors'=> $validator->errors(),
-                'status'=>400
+                'status'=>422
             ];
-            return response()->json($data,400);
+            return response()->json($data,422);
         }
 
         if($request->has('name')){
@@ -348,10 +351,10 @@ class UserController extends Controller
         $data = [
             'message'=>'Usuario Actualizado',
             'users'=> $users,
-            'status'=> 200
+            'status'=> 202
         ];
 
-        return response()->json($data,200);
+        return response()->json($data,202);
     }
 
     /**
@@ -371,9 +374,9 @@ class UserController extends Controller
         $users->delete();
         $data=[
             'message'=>'Usuario eliminado',
-            'Status'=>200,
+            'Status'=>204,
         ];
 
-        return response()->json($data,200);
+        return response()->json($data,204);
     }
 }

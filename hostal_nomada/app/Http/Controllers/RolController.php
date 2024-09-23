@@ -47,8 +47,7 @@ class RolController extends Controller
             'nombre'=>[
                 'required',
                 'string',
-                'regex:/^[A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\s\-]+( (de|del|la|el|y|e|o|un|una|los|las|y|entre|con))? [A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\-]+$/'
-            ]
+                'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'            ]
         ]);
 
         if($validator->fails()){
@@ -116,7 +115,7 @@ class RolController extends Controller
             'nombre'=>[
                 'required',
                 'string',
-                'regex:/^[A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\s\-]+( (de|del|la|el|y|e|o|un|una|los|las|y|entre|con))? [A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\-]+$/'
+                'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'
             ]
         ]);
 

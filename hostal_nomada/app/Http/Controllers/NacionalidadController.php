@@ -47,7 +47,8 @@ class NacionalidadController extends Controller
             'nombre'=>[
                 'required',
                 'string',
-                'regex:/^[A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\s\-]+( (de|del|la|el|y|e|o|un|una|los|las|y|entre|con))? [A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\-]+$/'
+                'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'
+                // 'regex:/^[A-Z][a-z]+(?: [A-Z][a-z]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-Z][a-z]+)*$/'
             ]
         ]);
 
@@ -57,10 +58,12 @@ class NacionalidadController extends Controller
                 'error'=>$validator->errors(),
                 'status'=>422
             ];
+
+            return response()->json($data,422);
         }
 
         $nacionalidades = nacionalidad::create([
-            'nombre'->$request->nombre
+            'nombre'=>$request->nombre
         ]);
 
 
@@ -103,9 +106,9 @@ class NacionalidadController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $nacionalides = nacionalidad::find($id);
+        $nacionalidades = nacionalidad::find($id);
 
-        if($nacionalides->isEmpty()){
+        if($nacionalidades->isEmpty()){
             $data = [
                 'message'=>'país no encontrado',
                 'status'=>404
@@ -118,8 +121,9 @@ class NacionalidadController extends Controller
             'nombre'=>[
                 'required',
                 'string',
-                'regex:/^[A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\s\-]+( (de|del|la|el|y|e|o|un|una|los|las|y|entre|con))? [A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\-]+$/'
-            ]
+                'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'
+                // 'regex:/^[A-Z][a-z]+(?: [A-Z][a-z]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-Z][a-z]+)*$/'
+                ]
         ]);
 
         if($validator->fails()){
@@ -130,9 +134,9 @@ class NacionalidadController extends Controller
             ];
         }
 
-        $nacionalides->nombre = $request->nombre;
+        $nacionalidades->nombre = $request->nombre;
 
-        if(!$nacionalides){
+        if(!$nacionalidades){
             $data = [
                 'message'=>'Error al actualizar el nombre del país',
                 'status'=>500
@@ -140,7 +144,7 @@ class NacionalidadController extends Controller
             return response()->json($data,500);
         }
 
-        $nacionalides->save();
+        $nacionalidades->save();
 
         $data=[
             'message'=>'Nombre del país actualizado correctamente',

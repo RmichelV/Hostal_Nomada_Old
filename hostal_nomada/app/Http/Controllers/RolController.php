@@ -15,7 +15,7 @@ class RolController extends Controller
     {
         $rols = rol::all();
 
-        if($rols->isEmpty){
+        if($rols->isEmpty()){
             $data=[
                 'message'=>'Roles no encontrados',
                 'status'=>404

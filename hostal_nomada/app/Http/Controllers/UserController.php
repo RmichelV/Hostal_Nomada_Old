@@ -86,9 +86,7 @@ class UserController extends Controller
                 'required',
                 'string',
                 'min:8',
-                'regex:/[a-z]/', 
-                'regex:/[A-Z]/', 
-                'regex:/[!@#$%^&*(),.?":{}|<>]/'],
+                'regex:/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'"\\|,.<>\/?]).*$/'],
         ]);
 
         if($validator->fails()){
@@ -211,9 +209,7 @@ class UserController extends Controller
                 'required',
                 'string',
                 'min:8',
-                'regex:/[a-z]/', 
-                'regex:/[A-Z]/', 
-                'regex:/[!@#$%^&*(),.?":{}|<>]/'],
+                'regex:/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'"\\|,.<>\/?]).*$/'],
         ]);
 
         if($validator->fails()){
@@ -298,9 +294,7 @@ class UserController extends Controller
             'password' => [
                 'string',
                 'min:8',
-                'regex:/[a-z]/', 
-                'regex:/[A-Z]/', 
-                'regex:/[!@#$%^&*(),.?":{}|<>]/'],
+                'regex:/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'"\\|,.<>\/?]).*$/'],
         ]);
 
         if($validator->fails()){

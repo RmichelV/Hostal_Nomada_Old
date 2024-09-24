@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\nacionalidad;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 class NacionalidadController extends Controller
 {
     /**
@@ -46,9 +47,9 @@ class NacionalidadController extends Controller
         $validator = Validator::make($request->all(),[
             'nombre'=>[
                 'required',
+                'unique:nacionalidades,nombre',
                 'string',
                 'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'
-                // 'regex:/^[A-Z][a-z]+(?: [A-Z][a-z]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-Z][a-z]+)*$/'
             ]
         ]);
 
@@ -88,9 +89,22 @@ class NacionalidadController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(nacionalidad $nacionalidad)
+    public function show($id)
     {
-        //
+        $nacionalidades = nacionalidad::find($id);
+        if(!$nacionalidades){
+            $data=[
+                'message'=>'país no encontrado',
+                'status'=>404
+            ];
+            return response()->json($data,404);
+        }
+        $data=[
+            'users'=>$nacionalidades,
+            'status'=>200
+        ];
+
+        return response()->json($data,200);
     }
 
     /**
@@ -108,7 +122,7 @@ class NacionalidadController extends Controller
     {
         $nacionalidades = nacionalidad::find($id);
 
-        if($nacionalidades->isEmpty()){
+        if(!$nacionalidades){
             $data = [
                 'message'=>'país no encontrado',
                 'status'=>404
@@ -120,9 +134,9 @@ class NacionalidadController extends Controller
         $validator = Validator::make($request->all(),[
             'nombre'=>[
                 'required',
+                Rule::unique('nacionalidades', 'nombre')->ignore($id),
                 'string',
                 'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'
-                // 'regex:/^[A-Z][a-z]+(?: [A-Z][a-z]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-Z][a-z]+)*$/'
                 ]
         ]);
 
@@ -132,19 +146,19 @@ class NacionalidadController extends Controller
                 'error'=>$validator->errors(),
                 'status'=>422
             ];
+
+            return response()->json($data,422);
         }
 
         $nacionalidades->nombre = $request->nombre;
 
-        if(!$nacionalidades){
+        if(!$nacionalidades->save()){
             $data = [
                 'message'=>'Error al actualizar el nombre del país',
                 'status'=>500
             ];
             return response()->json($data,500);
         }
-
-        $nacionalidades->save();
 
         $data=[
             'message'=>'Nombre del país actualizado correctamente',
@@ -159,9 +173,9 @@ class NacionalidadController extends Controller
      */
     public function destroy($id)
     {
-        $nacionalides = nacionalidad::find($id);
+        $nacionalidades = nacionalidad::find($id);
 
-        if($nacionalides->isEmpty()){
+        if(!$nacionalidades){
             $data = [
                 'message'=>'país no encontrado',
                 'status'=>404
@@ -170,13 +184,13 @@ class NacionalidadController extends Controller
             return response()->json($data,404);
         }
 
-        $nacionalides->delete();
+        $nacionalidades->delete();
 
         $data=[
             'message'=>'el país se ha eliminado correctamente',
             'Status'=>204,
         ];
-
+        
         return response()->json($data,204);
     }
 }

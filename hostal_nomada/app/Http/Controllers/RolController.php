@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\rol;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Validation\Rule;
 class RolController extends Controller
 {
     /**
@@ -46,9 +46,9 @@ class RolController extends Controller
         $validator = validator::make($request->all(),[
             'nombre'=>[
                 'required',
+                Rule::unique('rols', 'nombre'),
                 'string',
-                'regex:/^[A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\s\-]+( (de|del|la|el|y|e|o|un|una|los|las|y|entre|con))? [A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\-]+$/'
-            ]
+                'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'            ]
         ]);
 
         if($validator->fails()){
@@ -104,7 +104,7 @@ class RolController extends Controller
     {
         $rols = rol::find($id);
 
-        if($rols->isEmpty()){
+        if(!$rols){
             $data=[
                 'message'=>'No se encontraron roles',
                 'status'=>404
@@ -115,8 +115,9 @@ class RolController extends Controller
         $validator = validator::make($request->all(),[
             'nombre'=>[
                 'required',
+                Rule::unique('rols', 'nombre')->ignore($id),
                 'string',
-                'regex:/^[A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\s\-]+( (de|del|la|el|y|e|o|un|una|los|las|y|entre|con))? [A-Z][a-zA-ZÁÉÍÓÚÑÇáéíóúñç\-]+$/'
+                'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'
             ]
         ]);
 
@@ -132,14 +133,12 @@ class RolController extends Controller
 
         $rols->nombre=$request->nombre;
 
-        if(!$rols){
+        if(!$rols->save()){
             $data=[
                 'message'=>'Error al actualizar el rol',
                 'status'=>500
             ];
         }
-
-        $rols->save();
 
         $data=[
             'message'=>'Se actualizo correctamente el rol',
@@ -155,7 +154,8 @@ class RolController extends Controller
     public function destroy($id)
     {
         $rols = rol::find($id);
-        if($rols->isEmpty()){
+        
+        if(!$rols){
             $data = [
                 'message'=>'No se encontraron los roles',
                 'status'=>404

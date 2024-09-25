@@ -75,15 +75,18 @@ class UserController extends Controller
                 'integer', 
                 'exists:nacionalidades,id', 
             ],
-            'phone'=>'required','integer',
-            'email'=>'required','email',
+            'phone'=>[
+                'required',
+                'integer'],
+            'email'=>[
+                'required',
+                'unique:users,email',
+                'email'],
             'password' => [
                 'required',
                 'string',
                 'min:8',
-                'regex:/[a-z]/', 
-                'regex:/[A-Z]/', 
-                'regex:/[!@#$%^&*(),.?":{}|<>]/'],
+                'regex:/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'"\\|,.<>\/?]).*$/'],
         ]);
 
         if($validator->fails()){
@@ -201,14 +204,12 @@ class UserController extends Controller
                 'exists:nacionalidades,id'],
             'rol_id'=>'required','integer',
             'phone'=>'required','integer',
-            'email'=>'required','email',
+            'unique:users,email'. $users->id,
             'password' => [
                 'required',
                 'string',
                 'min:8',
-                'regex:/[a-z]/', 
-                'regex:/[A-Z]/', 
-                'regex:/[!@#$%^&*(),.?":{}|<>]/'],
+                'regex:/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'"\\|,.<>\/?]).*$/'],
         ]);
 
         if($validator->fails()){
@@ -293,9 +294,7 @@ class UserController extends Controller
             'password' => [
                 'string',
                 'min:8',
-                'regex:/[a-z]/', 
-                'regex:/[A-Z]/', 
-                'regex:/[!@#$%^&*(),.?":{}|<>]/'],
+                'regex:/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'"\\|,.<>\/?]).*$/'],
         ]);
 
         if($validator->fails()){
@@ -337,16 +336,13 @@ class UserController extends Controller
         
         $users->save();
 
-        if(!$users){
+        if(!$users->save()){
             $data=[
                 'message'=>'Error al actualizar el usuario',
                 'status'=> 500
             ];
             return response()->json($data,500);
         }
-
-
-        $users->save();
 
         $data = [
             'message'=>'Usuario Actualizado',

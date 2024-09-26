@@ -7,6 +7,7 @@ use App\Http\Controllers\ReservationRoomController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\RoomTypeController;
+use App\Http\Controllers\ShiftController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,4 +24,5 @@ Route::apiResource('employees', EmployeeController::class);
     Route::apiResource('reservationrooms', ReservationRoomController::class);
     Route::apiResource('roomtypes', RoomTypeController::class);
     Route::apiResource('rooms', RoomController::class);
+    Route::apiResource('shifts', ShiftController::class);
 

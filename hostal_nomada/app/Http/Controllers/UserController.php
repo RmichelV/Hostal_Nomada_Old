@@ -204,7 +204,7 @@ class UserController extends Controller
                 'exists:nacionalidades,id'],
             'rol_id'=>'required','integer',
             'phone'=>'required','integer',
-            'unique:users,email'. $users->id,
+            'email'=>'unique:users,email'. $users->id,
             'password' => [
                 'required',
                 'string',
@@ -290,7 +290,7 @@ class UserController extends Controller
                 'exists:nacionalidades,id'],
             'rol_id'=>'integer',
             'phone'=>'integer',
-            'email'=>'email',
+            'email'=>'unique:users,email'. $users->id,
             'password' => [
                 'string',
                 'min:8',

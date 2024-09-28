@@ -39,6 +39,27 @@ class NacionalidadController extends Controller
         //
     }
 
+        /**
+     * Display the specified resource.
+     */
+    public function show($id)
+    {
+        $nacionalidades = nacionalidad::find($id);
+        if(!$nacionalidades){
+            $data=[
+                'message'=>'país no encontrado',
+                'status'=>404
+            ];
+            return response()->json($data,404);
+        }
+        $data=[
+            'users'=>$nacionalidades,
+            'status'=>200
+        ];
+
+        return response()->json($data,200);
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -76,37 +97,16 @@ class NacionalidadController extends Controller
 
             return response()->json($data,500);
         }
-
+        
         $data=[
             'nacionalidad'=>$nacionalidades,
             'message'=>'Nacionalidad Agregada correctamente',
             'status'=>201
         ];
-
+        
         return response()->json($data,201);
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show($id)
-    {
-        $nacionalidades = nacionalidad::find($id);
-        if(!$nacionalidades){
-            $data=[
-                'message'=>'país no encontrado',
-                'status'=>404
-            ];
-            return response()->json($data,404);
-        }
-        $data=[
-            'users'=>$nacionalidades,
-            'status'=>200
-        ];
-
-        return response()->json($data,200);
-    }
-
+    
     /**
      * Show the form for editing the specified resource.
      */

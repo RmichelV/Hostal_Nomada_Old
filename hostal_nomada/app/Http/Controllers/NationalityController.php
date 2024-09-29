@@ -100,7 +100,7 @@ class NationalityController extends Controller
         }
         
         $data=[
-            'nationality'=>$$nationalities,
+            'nationality'=>$nationalities,
             'message'=>'Nacionalidad Agregada correctamente',
             'status'=>201
         ];

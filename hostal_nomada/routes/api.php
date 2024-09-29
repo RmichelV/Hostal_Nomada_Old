@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\NacionalidadController;
+use App\Http\Controllers\NationalityController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReservationRoomController;
 use App\Http\Controllers\RolController;
@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 // })->middleware('auth:sanctum');
 
 Route::resource('users',UserController::class);
-Route::resource('nacionalidades',NacionalidadController::class);
+Route::resource('nationalities',NationalityController::class);
 Route::resource('rols',RolController::class);
 Route::apiResource('employees', EmployeeController::class);
     Route::apiResource('reservations', ReservationController::class);

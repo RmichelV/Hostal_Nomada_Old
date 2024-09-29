@@ -17,12 +17,13 @@ use Illuminate\Support\Facades\Route;
 // })->middleware('auth:sanctum');
 
 Route::resource('users',UserController::class);
+Route::patch('/users/{id}', [UserController::class, 'updatePartial']);
 Route::resource('nationalities',NationalityController::class);
 Route::resource('rols',RolController::class);
 Route::apiResource('employees', EmployeeController::class);
-    Route::apiResource('reservations', ReservationController::class);
-    Route::apiResource('reservationrooms', ReservationRoomController::class);
-    Route::apiResource('roomtypes', RoomTypeController::class);
-    Route::apiResource('rooms', RoomController::class);
-    Route::apiResource('shifts', ShiftController::class);
+Route::apiResource('reservations', ReservationController::class);
+Route::apiResource('reservationrooms', ReservationRoomController::class);
+Route::apiResource('roomtypes', RoomTypeController::class);
+Route::apiResource('rooms', RoomController::class);
+Route::apiResource('shifts', ShiftController::class);
 

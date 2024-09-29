@@ -162,14 +162,122 @@ class UserController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    // /**
+    //  * Update the specified resource in storage.
+    //  */
+    // public function update(Request $request, $id)
+    //     {
+    //         $users= User::find($id);
+            
+    //         if(!$users){
+    //             $data=[
+    //                 'message'=>'Usuario no encontrado',
+    //                 'Status'=>404,
+    //             ];
+    //             return response()->json($data,404);
+    //         }
+
+    //         $validator = Validator::make($request->all(),[
+    //             'name'=>[
+    //                 'required', 
+    //                 'string', 
+    //                 'max:255', 
+    //                 'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
+    //             'last_name'=>[
+    //                 'required', 
+    //                 'string', 
+    //                 'max:255', 
+    //                 'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
+    //             'birthday' => [
+    //                 'required',
+    //                 'date',
+    //                 function ($attribute, $value, $fail) {
+    //                     $birthday = Carbon::parse($value);
+    //                     $today = Carbon::now();
+    //                     $age = $birthday->age;
+
+    //                     if ($age < 18) {
+    //                         $fail('Debe tener al menos 18 años.');
+    //                     } elseif ($age > 88) {
+    //                         $fail('Debe tener como máximo 88 años.');
+    //                     }
+    //                 },],  
+    //             'nationality_id' => [
+    //                 'required',
+    //                 'integer', 
+    //                 'exists:nationalities,id'],
+    //             'identity_number'=>[
+    //                 'regex:/^[0-9]{1,10}$/'],
+    //             'rol_id'=>[
+    //                 'required',
+    //                 'integer'],
+    //             'phone'=>[
+    //                 'required',
+    //                 'regex:/^[0-9]{1,10}$/'],
+    //             'email' => [
+    //                 'required',
+    //                 'string',
+    //                 'email',
+    //                 'max:255',
+    //                 'unique:users,email,' . $users->id 
+    //             ],
+    //             'password' => [
+    //                 'required',
+    //                 'string',
+    //                 'min:8',
+    //                 'regex:/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'"\\|,.<>\/?]).*$/'],
+    //         ]);
+
+    //         if($validator->fails()){
+    //             $data=[
+    //                 'message'=>'Error en la validación de datos',
+    //                 'errors'=> $validator->errors(),
+    //                 'status'=>422
+    //             ];
+    //             return response()->json($data,422);
+    //         }
+
+    //         $users->name = $request->name;
+    //         $users->last_name = $request->last_name;
+    //         $users->nationality_id = $request->nationality_id;
+    //         $users->identity_number=$request->identity_number;
+    //         $users->birthday = $request->birthday;
+    //         $users->rol_id = $request->rol_id;
+    //         $users->phone=$request->phone;
+    //         $users->email=$request->email;
+    //            // Actualizar la contraseña solo si se proporciona
+    //         if ($request->filled('password')) {
+    //             $users->password = Hash::make($request->password); // Aplicar Hash
+    //         }
+
+
+
+    //         if(!$users){
+    //             $data=[
+    //                 'message'=>'Error al actualizar el usuario',
+    //                 'status'=> 500
+    //             ];
+
+    //             return response()->json($data,500);
+    //         }
+
+    //         $users->save();
+
+    //         $data = [
+    //             'message'=>'Usuario Actualizado',
+    //             'status'=> 202
+    //         ];
+
+    //         return response()->json($data,202);
+    //     }
+        
+
+        
     public function update(Request $request, $id)
     {
-        $users= User::find($id);
+        $user= User::find($id);
         
-        if(!$users){
+        if(!$user){
             $data=[
                 'message'=>'Usuario no encontrado',
                 'Status'=>404,
@@ -179,134 +287,51 @@ class UserController extends Controller
 
         $validator = Validator::make($request->all(),[
             'name'=>[
-                    'required', 
-                    'string', 
-                    'max:255', 
-                    'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
+                'nullable',
+                'string', 
+                'max:255', 
+                'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
             'last_name'=>[
-                    'required', 
-                    'string', 
-                    'max:255', 
-                    'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
-            'birthday' => [
-                        'required',
-                        'date',
-                        function ($attribute, $value, $fail) {
-                            $birthday = Carbon::parse($value);
-                            $today = Carbon::now();
-                            $age = $birthday->age;
-
-                            if ($age < 18) {
-                                $fail('Debe tener al menos 18 años.');
-                            } elseif ($age > 88) {
-                                $fail('Debe tener como máximo 88 años.');
-                            }
-                        },],  
+                'nullable',
+                'string', 
+                'max:255', 
+                'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
             'nationality_id' => [
-                'required',
+                'nullable',
                 'integer', 
                 'exists:nationalities,id'],
             'identity_number'=>[
-                'regex:/^[0-9]{1,10}$/'
-            ],
+                'nullable',
+                'regex:/^[0-9]{1,10}$/'],
+            'birthday' => [
+                'nullable',
+                'date',
+                function ($attribute, $value, $fail) {
+                    $birthday = Carbon::parse($value);
+                    $today = Carbon::now();
+                    $age = $birthday->age;
+
+                    if ($age < 18) {
+                        $fail('Debe tener al menos 18 años.');
+                    } elseif ($age > 88) {
+                        $fail('Debe tener como máximo 88 años.');
+                    }
+                },],  
             'rol_id'=>[
-                'required',
+                'nullable',
                 'integer'],
             'phone'=>[
-                'required',
-                'regex:/^[0-9]{1,10}$/'
-            ],
-            'email'=>'unique:users,email'. $users->id,
-            'password' => [
-                'required',
+                'nullable',
+                'regex:/^[0-9]{1,10}$/'],
+            'email' => [
+                'nullable',
                 'string',
-                'min:8',
-                'regex:/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'"\\|,.<>\/?]).*$/'],
-        ]);
-
-        if($validator->fails()){
-            $data=[
-                'message'=>'Error en la validación de datos',
-                'errors'=> $validator->errors(),
-                'status'=>422
-            ];
-            return response()->json($data,422);
-        }
-
-        $users->name = $request->name;
-        $users->last_name = $request->last_name;
-        $users->nationality_id = $request->nationality_id;
-        $users->identity_number=$request->identity_number;
-        $users->birthday = $request->birthday;
-        $users->rol_id = $request->rol_id;
-        $users->phone=$request->phone;
-        $users->email=$request->email;
-        $users->password=$request->password;
-
-
-        if(!$users){
-            $data=[
-                'message'=>'Error al actualizar el usuario',
-                'status'=> 500
-            ];
-
-            return response()->json($data,500);
-        }
-
-        $users->save();
-
-        $data = [
-            'message'=>'Usuario Actualizado',
-            'status'=> 202
-        ];
-
-        return response()->json($data,202);
-    }
-    
-    public function updatePartial(Request $request, $id)
-    {
-        $users= User::find($id);
-        
-        if(!$users){
-            $data=[
-                'message'=>'Usuario no encontrado',
-                'Status'=>404,
-            ];
-            return response()->json($data,404);
-        }
-
-        $validator = Validator::make($request->all(),[
-            'name'=>[
-                    'string', 
-                    'max:255', 
-                    'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
-            'last_name'=>[
-                    'string', 
-                    'max:255', 
-                    'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
-            'nationality_id' => [
-                'integer', 
-                'exists:nationalities,id'],
-            'identity_number'=>[
-                'regex:/^[0-9]{1,10}$/'
-            ],
-            'birthday' => [
-                        'date',
-                        function ($attribute, $value, $fail) {
-                            $birthday = Carbon::parse($value);
-                            $today = Carbon::now();
-                            $age = $birthday->age;
-
-                            if ($age < 18) {
-                                $fail('Debe tener al menos 18 años.');
-                            } elseif ($age > 88) {
-                                $fail('Debe tener como máximo 88 años.');
-                            }
-                        },],  
-            'rol_id'=>'integer',
-            'phone'=>['regex:/^[0-9]{1,10}$/'],
-            'email'=>'unique:users,email'. $users->id,
+                'email',
+                'max:255',
+                'unique:users,email,' . $user->id 
+                ],
             'password' => [
+                'nullable',
                 'string',
                 'min:8',
                 'regex:/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'"\\|,.<>\/?]).*$/'],
@@ -322,39 +347,40 @@ class UserController extends Controller
         }
 
         if($request->has('name')){
-            $users->name = $request->name;
+            $user->name = $request->name;
         }
         if($request->has('last_name')){
-            $users->last_name = $request->last_name;
+            $user->last_name = $request->last_name;
         }
         if($request->has('birthday')){
-            $users->birthday = $request->birthday;
+            $user->birthday = $request->birthday;
         }
         if($request->has('nationality_id')){
-            $users->nationality_id = $request->nationality_id;
+            $user->nationality_id = $request->nationality_id;
         }
-        if($request->has('nationality_id')){
-            $users->identity_number = $request->identity_number;
+        if($request->has('identity_number')){
+            $user->identity_number = $request->identity_number;
         }
         if($request->has('rol_id')){
-            $users->rol_id = $request->rol_id;
+            $user->rol_id = $request->rol_id;
         }
         
         if($request->has('phone')){
-            $users->phone = $request->phone;
+            $user->phone = $request->phone;
         }
         
         if($request->has('email')){
-            $users->email = $request->email;
+            $user->email = $request->email;
         }
-        
-        if($request->has('password')){
-            $users->password = $request->password;
+           // Actualizar la contraseña solo si se proporciona
+        if ($request->filled('password')) {
+            $user->password = Hash::make($request->password); // Aplicar Hash
         }
-        
-        $users->save();
 
-        if(!$users->save()){
+        
+        $user->save();
+
+        if(!$user){
             $data=[
                 'message'=>'Error al actualizar el usuario',
                 'status'=> 500
@@ -363,8 +389,8 @@ class UserController extends Controller
         }
 
         $data = [
+            'user'=> $user,
             'message'=>'Usuario Actualizado',
-            'users'=> $users,
             'status'=> 202
         ];
 

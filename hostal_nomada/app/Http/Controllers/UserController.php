@@ -56,6 +56,14 @@ class UserController extends Controller
                     'string', 
                     'max:255', 
                     'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
+            'nationality_id' => [
+                'required',
+                'integer', 
+                'exists:nationalities,id', 
+            ],
+            'identity_number'=>[
+                'regex:/^[0-9]{1,10}$/'
+            ],
             'birthday' => [
                         'required',
                         'date',
@@ -70,14 +78,9 @@ class UserController extends Controller
                                 $fail('Debe tener como máximo 88 años.');
                             }
                         },],  
-            'nacionalidad_id' => [
-                'required',
-                'integer', 
-                'exists:nacionalidades,id', 
-            ],
             'phone'=>[
                 'required',
-                'integer'],
+                'regex:/^[0-9]{1,10}$/'],
             'email'=>[
                 'required',
                 'unique:users,email',
@@ -101,8 +104,9 @@ class UserController extends Controller
         $users =  User::create([
             'name'=> $request->name,
             'last_name'=> $request->last_name,
+            'nationality_id'=> $request->nationality_id,
+            'identity_number'=>$request->identity_number,
             'birthday'=> $request->birthday,
-            'nacionalidad_id'=> $request->nacionalidad_id,
             'rol_id'=>3,
             'phone'=> $request->phone,
             'email'=> $request->email,
@@ -120,7 +124,7 @@ class UserController extends Controller
 
 
         $data = [
-            'users'=> $users,
+            'user'=> $users,
             'message'=>'usuario agregado correctamente',
             'status'=> 201
         ];
@@ -198,12 +202,20 @@ class UserController extends Controller
                                 $fail('Debe tener como máximo 88 años.');
                             }
                         },],  
-            'nacionalidad_id' => [
+            'nationality_id' => [
                 'required',
                 'integer', 
-                'exists:nacionalidades,id'],
-            'rol_id'=>'required','integer',
-            'phone'=>'required','integer',
+                'exists:nationalities,id'],
+            'identity_number'=>[
+                'regex:/^[0-9]{1,10}$/'
+            ],
+            'rol_id'=>[
+                'required',
+                'integer'],
+            'phone'=>[
+                'required',
+                'regex:/^[0-9]{1,10}$/'
+            ],
             'email'=>'unique:users,email'. $users->id,
             'password' => [
                 'required',
@@ -223,8 +235,9 @@ class UserController extends Controller
 
         $users->name = $request->name;
         $users->last_name = $request->last_name;
+        $users->nationality_id = $request->nationality_id;
+        $users->identity_number=$request->identity_number;
         $users->birthday = $request->birthday;
-        $users->nacionalidad_id = $request->nacionalidad_id;
         $users->rol_id = $request->rol_id;
         $users->phone=$request->phone;
         $users->email=$request->email;
@@ -244,7 +257,6 @@ class UserController extends Controller
 
         $data = [
             'message'=>'Usuario Actualizado',
-            'users'=> $users,
             'status'=> 202
         ];
 
@@ -272,6 +284,12 @@ class UserController extends Controller
                     'string', 
                     'max:255', 
                     'regex:/^([A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)(\s[A-ZÁÉÍÓÚÑÇĆ][a-záéíóúñçć]+)*$/'],
+            'nationality_id' => [
+                'integer', 
+                'exists:nationalities,id'],
+            'identity_number'=>[
+                'regex:/^[0-9]{1,10}$/'
+            ],
             'birthday' => [
                         'date',
                         function ($attribute, $value, $fail) {
@@ -285,11 +303,8 @@ class UserController extends Controller
                                 $fail('Debe tener como máximo 88 años.');
                             }
                         },],  
-            'nacionalidad_id' => [
-                'integer', 
-                'exists:nacionalidades,id'],
             'rol_id'=>'integer',
-            'phone'=>'integer',
+            'phone'=>['regex:/^[0-9]{1,10}$/'],
             'email'=>'unique:users,email'. $users->id,
             'password' => [
                 'string',
@@ -315,8 +330,11 @@ class UserController extends Controller
         if($request->has('birthday')){
             $users->birthday = $request->birthday;
         }
-        if($request->has('nacionalidad_id')){
-            $users->nacionalidad_id = $request->nacionalidad_id;
+        if($request->has('nationality_id')){
+            $users->nationality_id = $request->nationality_id;
+        }
+        if($request->has('nationality_id')){
+            $users->identity_number = $request->identity_number;
         }
         if($request->has('rol_id')){
             $users->rol_id = $request->rol_id;

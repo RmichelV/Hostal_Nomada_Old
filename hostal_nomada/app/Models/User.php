@@ -21,8 +21,9 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'last_name',
+        'nationality_id',
+        'identy_number',
         'birthday',
-        'nacionalidad_id',
         'rol_id',
         'phone',
         'email',
@@ -35,7 +36,7 @@ class User extends Authenticatable
         return $this->belongsTo(Rol::class, 'rol_id', 'id');
     }
     public function nacionalidad(){
-        return $this->belongsTo(nacionalidad::class, 'nacionalidad_id', 'id');
+        return $this->belongsTo(Nationality::class, 'nationality_id', 'id');
     }
 
     /**

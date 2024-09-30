@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -24,21 +25,42 @@ class AuthController extends Controller
         return response()->json(['message' => 'User registered successfully!']);
     }
 
+    // public function login(Request $request)
+    // {
+    //     $request->validate([
+    //         'email' => 'required|string|email',
+    //         'password' => 'required|string',
+    //     ]);
+
+    //     $user = User::where('email', $request->email)->first();
+
+    //     if (!$user || !Hash::check($request->password, $user->password)) {
+    //         return response()->json(['message' => 'Invalid credentials'], 401);
+    //     }
+
+    //     $token = $user->createToken('Personal Access Token')->plainTextToken;
+
+    //     return response()->json(['token' => $token]);
+    // }
+
     public function login(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|string|email',
-            'password' => 'required|string',
-        ]);
+{
+    $credentials = $request->only('email', 'password');
 
-        $user = User::where('email', $request->email)->first();
+    if (Auth::attempt($credentials)) {
+        $user = Auth::user(); // Obtiene el usuario autenticado
+        $token = $user->createToken('token_name')->plainTextToken; // Crea el token
 
-        if (!$user || !Hash::check($request->password, $user->password)) {
-            return response()->json(['message' => 'Invalid credentials'], 401);
-        }
-
-        $token = $user->createToken('Personal Access Token')->plainTextToken;
-
-        return response()->json(['token' => $token]);
+        return response()->json([
+            'token' => $token,
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                // Agrega aquí otros campos que quieras enviar
+            ]
+        ], 200);
     }
+
+    return response()->json(['message' => 'Las credenciales son incorrectas'], 401);
+}
 }

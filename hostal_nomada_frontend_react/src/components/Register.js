@@ -12,11 +12,12 @@ const Register = () => {
         birthday: '',
         phone: '',
         email: '',
-        password: ''
+        password: '',
+        confirmPassword: '', 
     });
 
     const [errors, setErrors] = useState({});
-    const navigate = useNavigate(); // Hook para la navegación
+    const navigate = useNavigate(); 
 
     const handleNationalityChange = (event) => {
         const selectedNationality = event.target.value;
@@ -31,21 +32,23 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Datos del formulario antes de enviar:', formData); // Logging de datos
+        console.log('Datos del formulario antes de enviar:', formData); 
+
+        if (formData.password !== formData.confirmPassword) {
+            setErrors({ confirmPassword: ["Las contraseñas no coinciden."] });
+            return; 
+        }
 
         try {
             const response = await axios.post('http://localhost:8000/api/users', formData);
             console.log('Usuario registrado:', response.data);
-            
-            // Almacenar el nombre de usuario en localStorage
             localStorage.setItem('userName', formData.name);
-
-            navigate('/'); // Redirigir a la página de inicio
+            navigate('/');
         } catch (error) {
-            console.error('Error en la solicitud:', error); // Logging de errores
+            console.error('Error en la solicitud:', error); 
             if (error.response && error.response.data.errors) {
                 setErrors(error.response.data.errors);
-                console.log('Errores:', error.response.data.errors); // Logging de errores específicos
+                console.log('Errores:', error.response.data.errors); 
             } else {
                 console.error('Error al registrar el usuario:', error);
             }
@@ -81,7 +84,7 @@ const Register = () => {
             </div>
 
             <div>
-                <label>Nacionalidad:</label>
+                <label>País de origen:</label>
                 <NationalitySelect onChange={handleNationalityChange} />
             </div>
 
@@ -146,10 +149,21 @@ const Register = () => {
                 {errors.password && <p>{errors.password[0]}</p>}
             </div>
 
+            <div>
+                <label>Confirmar Contraseña:</label>
+                <input
+                    type="password"
+                    name="confirmPassword" 
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                    required
+                />
+                {errors.confirmPassword && <p>{errors.confirmPassword[0]}</p>}
+            </div>
+
             <button type="submit">Registrar</button>
         </form>
     );
 };
 
 export default Register;
-

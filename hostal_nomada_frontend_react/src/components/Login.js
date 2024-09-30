@@ -64,6 +64,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
+import login from '../styles/components/Login.css'
 
 const Login = () => {
     const [email, setEmail] = useState(''); // Estado para el correo
@@ -92,35 +93,41 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h2> Iniciar sesión </h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Correo electrónico</label>
-                    <input
-                        type='text'
-                        placeholder='Ingresa tu correo aquí'
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                </div>
+        <div className='fondo-login'>
+            
+            <div className='fondo-form-login'>
+                <h2 className='title-form-login'> Bienvenid@ </h2>
+                <form onSubmit={handleSubmit} className='form-login'>
+                    <div>
+                        {/* <label>Correo electrónico</label> */}
+                        <input
+                            className='input-login'
+                            type='text'
+                            placeholder='Ingresa tu correo electrónico aquí'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
 
-                <div>
-                    <label>Contraseña</label>
-                    <input
-                        type='password'
-                        placeholder='Ingresa tu contraseña aquí'
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                
-                {errorMessage && ( // Muestra el mensaje de error si existe
-                    <div style={{ color: 'red' }}>{errorMessage}</div>
-                )}
-
-                <button type='submit'>Ingresar</button>
-            </form>
+                    <div>
+                        {/* <label>Contraseña</label> */}
+                        <input
+                            className='input-login'
+                            type='password'
+                            placeholder='Ingresa tu contraseña aquí'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    
+                    {errorMessage && ( // Muestra el mensaje de error si existe
+                        <div style={{ color: 'red' }}>{errorMessage}</div>
+                    )}
+                    <div className='form-button-login'>
+                        <button type='submit'>Ingresar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 };

@@ -27,3 +27,11 @@ Route::apiResource('roomtypes', RoomTypeController::class);
 Route::apiResource('rooms', RoomController::class);
 Route::apiResource('shifts', ShiftController::class);
 
+
+use App\Http\Controllers\AuthController;
+
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});

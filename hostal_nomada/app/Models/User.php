@@ -35,7 +35,7 @@ class User extends Authenticatable
     public function rol(){
         return $this->belongsTo(Rol::class, 'rol_id', 'id');
     }
-    public function nacionalidad(){
+    public function nationality(){
         return $this->belongsTo(Nationality::class, 'nationality_id', 'id');
     }
 

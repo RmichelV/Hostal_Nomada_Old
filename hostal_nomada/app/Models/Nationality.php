@@ -14,6 +14,6 @@ class Nationality extends Model
     public $timestamps=false;
 
     public function users(){
-        return $this->hasMany( User::class, 'rol_id', 'id');
+        return $this->hasMany( User::class, 'nationality_id', 'id');
     }
 }

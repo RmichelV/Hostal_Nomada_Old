@@ -1,57 +1,3 @@
-// import React from 'react';
-// import Nav from '../styles/components/Nav.css'
-// import { Link } from 'react-router-dom';
-
-// const NavBar = () => {
-//     return(
-//         <div>
-//             <nav>
-//                 <img 
-//                     src="/images/Logo-HNS.png"
-//                     alt='Logo Hostal Nomada'
-//                     className='img-logo'
-//                 />
-//                 <ul
-//                     class="nav-ul"
-//                 >
-//                     <li className="nav-item">
-//                         <Link className="nav-link" to="/contact">Contáctanos</Link> {/* Agrega to aquí */}
-//                     </li>
-//                     <li className="nav-item">
-//                         <Link className="nav-link" to="/rooms">Habitaciones</Link> {/* Agrega to aquí */}
-//                     </li>
-//                     <li className="nav-item">
-//                         <Link className="nav-link" to="/salons">Salones</Link> {/* Agrega to aquí */}
-//                     </li>
-//                     <li className="nav-item">
-//                         <Link className="nav-link" to="/services">Servicios</Link> {/* Agrega to aquí */}
-//                     </li>
-//                     <li className="nav-item">
-//                         <Link className="nav-link" to="/packages">Paquetes</Link> {/* Agrega to aquí */}
-//                     </li>
-//                     <li className="nav-item">
-//                         <Link className="nav-link" to="/reservations">Reservas</Link> {/* Agrega to aquí */}
-//                     </li>
-//                     <li className="nav-item">
-//                         <Link className="nav-link" to="/login">Iniciar Sesión</Link> {/* Agrega to aquí */}
-//                     </li>
-//                     <li className="nav-item">
-//                         <Link className="nav-link" to="/register">Registrarse</Link> {/* Esta línea ya está bien */}
-//                     </li>
-//                 </ul>
-                
-//             </nav>
-
-
-//         </div>
-
-        
-//     );
-// };
-
-// export default NavBar;
-
-
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/components/Nav.css'; // Asegúrate de que la ruta sea correcta
@@ -68,55 +14,100 @@ const NavBar = () => {
     };
 
     return (
-        <div>
-            <nav>
-                <img 
+        <div id='nav' className="navbar bg-base-100">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul
+                        tabIndex={0}
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><Link to="/contact">Contáctanos</Link></li>
+                        <li tabIndex={0}>
+                            <a>Habitaciones</a>
+                            <ul className="p-2">
+                                <li><Link to="/rooms">Habitaciones</Link></li>
+                                <li><Link to="/salons">Salones</Link></li>
+                            </ul>
+                        </li>
+                        <li><Link to="/services">Servicios</Link></li>
+                        <li><Link to="/packages">Paquetes</Link></li>
+                        <li><Link to="/reservations">Reservas</Link></li>
+                        {userName ? (
+                            <>
+                                <li><Link to="/userUpdate">Hola, {userName}</Link></li>
+                                <li><button className="nav-link" onClick={handleLogout}>Cerrar Sesión</button></li>
+                            </>
+                        ) : (
+                            <>
+                                <li><Link to="/login">Iniciar Sesión</Link></li>
+                                <li><Link to="/register">Registrarse</Link></li>
+                            </>
+                        )}
+                    </ul>
+                </div>
+                <Link to="/"><img 
                     src="/images/Logo-HNS.png"
                     alt='Logo Hostal Nomada'
                     className='img-logo'
-                />
-                <ul className="nav-ul">
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/contact">Contáctanos</Link>
+                /></Link>
+                
+            </div>
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    <li><Link to="/contact">Contáctanos</Link></li>
+                    <li>
+                        <details>
+                            <summary>Habitaciones</summary>
+                            <ul className="p-2">
+                                <li><Link to="/rooms">Habitaciones</Link></li>
+                                <li><Link to="/salons">Salones</Link></li>
+                            </ul>
+                        </details>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/rooms">Habitaciones</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/salons">Salones</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/services">Servicios</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/packages">Paquetes</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/reservations">Reservas</Link>
-                    </li>
-
-                    {userName ? ( // Si hay un nombre de usuario, muestra esto
+                    <li><Link to="/services">Servicios</Link></li>
+                    <li><Link to="/packages">Paquetes</Link></li>
+                    <li><Link to="/reservations">Reservas</Link></li>
+                    {/* {userName ? (
                         <>
-                            <li className="nav-item">
-                                {/* <span className="nav-user">Hola, {userName}</span> Muestra el nombre del usuario */}
-                                <Link className='nav-user' to='/userUpdate'> Hola, {userName}</Link>
-                            </li>
-                            <li className="nav-item">
-                                <button className="nav-link" onClick={handleLogout} >Cerrar Sesión</button> {/* Botón para cerrar sesión */}
-                            </li>
+                            <li className="user"><Link to="/userUpdate">Hola, {userName}</Link></li>
+                            <li className="user"><button className="nav-link" onClick={handleLogout}>Cerrar Sesión</button></li>
                         </>
                     ) : (
                         <>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/login">Iniciar Sesión</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/register">Registrarse</Link>
-                            </li>
+                            <li className="user"><Link to="/login">Iniciar Sesión</Link></li>
+                            <li className="user"><Link to="/register">Registrarse</Link></li>
+                        </>
+                    )} */}
+                </ul>
+            </div>
+            <div className="navbar-end">
+            <ul className="menu menu-horizontal px-1">
+            {userName ? (
+                        <>
+                            <li className="user"><Link to="/userUpdate">Hola, {userName}</Link></li>
+                            <li className="user"><button className="nav-link" onClick={handleLogout}>Cerrar Sesión</button></li>
+                        </>
+                    ) : (
+                        <>
+                            <li className="user"><Link to="/login">Iniciar Sesión</Link></li>
+                            <li className="user"><Link to="/register">Registrarse</Link></li>
                         </>
                     )}
-                </ul>
-            </nav>
+                    </ul>
+            </div>
         </div>
     );
 };

@@ -1,41 +1,119 @@
-nav{
+nav {
     display: flex;
-    background-color: #027d8c;
-    /* background-color: #8c0202; */
+    background-color: #027d8c; /* Color de fondo del navbar */
     justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
 }
-.img-logo{
+#nav {
+    display: flex;
+    background-color: #027d8c; /* Color de fondo del navbar */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+}
+.img-logo {
     height: 12vh;
 }
 
-.nav-ul{
+.logo-container {
+    height: 12vh; 
+    display: flex;
+    align-items: center; }
+
+img.logo {
+    max-height: 100%;
+    max-width: 100%;  
+    object-fit: contain;
+}
+.nav-ul {
     display: flex;
     list-style: none;
     padding: 2vh;
+    margin: 0;
 }
 
-.nav-ul :hover{
-    background-color: aliceblue;
+.nav-ul li:hover {
+    background-color: #f0f0f0; /* Fondo claro al pasar el cursor */
     cursor: pointer;
+    border-radius: 20px;
 }
 
-.nav-item{
-    /* border:2px rgb(255, 0, 0) solid; */
+.nav-item {
     margin-right: 20px;
     display: flex;
     align-items: center;
     border-radius: 20px;
     padding: 0 1vw;
+    transition: background-color 0.3s ease-in-out;
 }
 
-
-.nav-link{
+.nav-link {
     text-decoration: none;
-    color: black;
+    color: white; /* Color de texto en blanco */
     font-size: 2vh;
     text-align: center;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
+.nav-link:hover {
+    color: #03505a; /* Color del texto al pasar el cursor */
+    background-color: white; /* Fondo blanco para contraste */
+    border-radius: 20px;
+}
+
+/* Estilos para el botón de cerrar sesión o cualquier otro botón */
+button.nav-link {
+    background: none;
+    border: none;
+    font-size: 2vh;
+    color: white; /* Texto blanco */
+    cursor: pointer;
+}
+
+button.nav-link:hover {
+    color: #027d8c;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Adaptaciones para el dropdown de DaisyUI */
+.menu {
+    background-color: #027d8c; /* Fondo del menú desplegable */
+    color: white; /* Color del texto */
+}
+
+.menu li:hover {
+    background-color: #f0f0f0;
+    color: #031c1f; /* Cambia el color del texto en hover */
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.dropdown-content {
+    background-color: #027d8c; /* Fondo del dropdown */
+}
+
+.dropdown-content li:hover {
+    background-color: #f0f0f0;
+    color: #027d8c;
+}
+
+.btn-ghost {
+    color: white; /* Texto blanco para los botones fantasmas */
+}
+
+.btn {
+    background-color: #027d8c; /* Fondo del botón principal */
+    color: white; /* Texto del botón principal */
+}
+
+.btn:hover {
+    background-color: white; /* Fondo blanco en hover */
+    color: #027d8c; /* Texto azul en hover */
+}
+

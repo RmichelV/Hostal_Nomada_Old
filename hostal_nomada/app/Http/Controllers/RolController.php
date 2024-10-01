@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Rol;
+use App\Models\rol;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
-
 class RolController extends Controller
 {
     /**
@@ -14,7 +13,7 @@ class RolController extends Controller
      */
     public function index()
     {
-        $rols = Rol::all();
+        $rols = rol::all();
 
         if($rols->isEmpty()){
             $data=[
@@ -69,9 +68,9 @@ class RolController extends Controller
     public function store(Request $request)
     {
         $validator = validator::make($request->all(),[
-            'name'=>[
+            'nombre'=>[
                 'required',
-                Rule::unique('rols', 'name'),
+                Rule::unique('rols', 'nombre'),
                 'string',
                 'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'            ]
         ]);
@@ -85,8 +84,8 @@ class RolController extends Controller
             return response()->json($data,422);
         }
 
-        $rols =  Rol::create([
-            'name'=> $request->name
+        $rols =  rol::create([
+            'nombre'=> $request->nombre
         ]);
 
         if(!$rols){
@@ -98,8 +97,8 @@ class RolController extends Controller
         }
 
         $data = [
-            'rol'=> $rols,
-            'message'=>'rol creado correctamente',
+            'rol creado correctamente',
+            'rols'=> $rols,
             'status'=> 201
         ];
 
@@ -119,7 +118,7 @@ class RolController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $rols = Rol::find($id);
+        $rols = rol::find($id);
 
         if(!$rols){
             $data=[
@@ -130,9 +129,9 @@ class RolController extends Controller
         }
 
         $validator = validator::make($request->all(),[
-            'name'=>[
+            'nombre'=>[
                 'required',
-                Rule::unique('rols', 'name')->ignore($id),
+                Rule::unique('rols', 'nombre')->ignore($id),
                 'string',
                 'regex:/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*(?: (de[l]?|Del|La|Los|Las|República|Democrática|del))?(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/'
             ]
@@ -148,7 +147,7 @@ class RolController extends Controller
             return response()->json($data,422);
         }
 
-        $rols->name=$request->name;
+        $rols->nombre=$request->nombre;
 
         if(!$rols->save()){
             $data=[
@@ -170,7 +169,7 @@ class RolController extends Controller
      */
     public function destroy($id)
     {
-        $rols = Rol::find($id);
+        $rols = rol::find($id);
         
         if(!$rols){
             $data = [

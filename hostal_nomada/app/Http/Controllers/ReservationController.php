@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -30,21 +31,27 @@ class ReservationController extends Controller
         }
     }
 
-    public function store(ReservationRequest $request)
+    public function store(Request $request)
     {
-        try {
-            $reservation = Reservation::create($request->validated());
-            return (new ReservationResource($reservation))->additional([
-                'message' => 'Reservation created successfully',
-                'status' => Response::HTTP_OK,
-            ]);
-        } catch (Exception $e) {
-            return response()->json([
-                'message' => 'Error creating reservation',
-                'status' => Response::HTTP_INTERNAL_SERVER_ERROR,
-            ], Response::HTTP_INTERNAL_SERVER_ERROR);
-        }
+        $validated = $request->validate([
+            'entry_date' => 'required|date',
+            'depature_date' => 'required|date',
+            'rooms' => 'required|array', 
+        ]);
+    
+        $reservation = Reservation::create([
+            'user_id' => Auth::id(), 
+            'entry_date' => $validated['entry_date'],
+            'depature_date' => $validated['depature_date'],
+        ]);
+    
+        // Asocia las habitaciones seleccionadas
+        $reservation->rooms()->attach($validated['rooms']);
+    
+        return response()->json(['message' => 'Reserva creada exitosamente'], 201);
     }
+    
+
 
     public function show($id)
     {
@@ -93,4 +100,15 @@ class ReservationController extends Controller
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
+    public function getUserReservations()
+{
+    $user = Auth::user();
+
+    $reservations = Reservation::with('rooms')
+                                ->where('user_id', 1)
+                                ->get();
+
+    return response()->json(['data' => $reservations], 200);
+}
+
 }

@@ -5,15 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Nationality extends Model
+class nacionalidad extends Model
 {
     use HasFactory;
-    protected $table = 'nationalities';
+
+    protected $table = 'nacionalidades';
     protected $primaryKey = 'id';
-    protected $fillable = ['name'];
+    protected $fillable = ['nombre'];
     public $timestamps=false;
 
     public function users(){
-        return $this->hasMany( User::class, 'nationality_id', 'id');
+        return $this->hasMany( User::class, 'rol_id', 'id');
     }
+
 }

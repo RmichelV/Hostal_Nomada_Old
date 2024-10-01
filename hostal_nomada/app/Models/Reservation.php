@@ -24,4 +24,14 @@ class Reservation extends Model
     {
         return $this->belongsTo(Employee::class);
     }
+
+
+    // Relación many-to-many con rooms
+    public function rooms()
+    {
+        return $this->belongsToMany(Room::class, 'reservation_rooms')
+                    ->withTimestamps(); // Si necesitas las marcas de tiempo en la tabla pivote
+    }
+
+
 }

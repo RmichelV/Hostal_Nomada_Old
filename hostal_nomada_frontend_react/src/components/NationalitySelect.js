@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
+import nationalities from '../styles/components/nationalities.css'
 
 const NationalitySelect = ({ onChange }) => {
     const [nationalities, setNationalities] = useState([]);
@@ -34,10 +35,10 @@ const NationalitySelect = ({ onChange }) => {
     }
 
     return (
-        <select onChange={onChange}>
+        <select onChange={onChange} className='input-nationalities'>
             <option value="">Seleccione una nacionalidad</option>
             {nationalities.map(nationality => (
-                <option key={nationality.id} value={nationality.id}>
+                <option key={nationality.id} value={nationality.id} >
                     {nationality.name}
                 </option>
             ))}

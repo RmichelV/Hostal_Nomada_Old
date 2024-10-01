@@ -99,7 +99,7 @@ const NavBar = () => {
                         <>
                             <li className="nav-item">
                                 {/* <span className="nav-user">Hola, {userName}</span> Muestra el nombre del usuario */}
-                                <Link className='nav-user' to='/userUpdate'> Hola, {userName}</Link>
+                                <Link className='nav-link' to='/userUpdate'> Hola, {userName}</Link>
                             </li>
                             <li className="nav-item">
                                 <button className="nav-link" onClick={handleLogout} >Cerrar Sesión</button> {/* Botón para cerrar sesión */}

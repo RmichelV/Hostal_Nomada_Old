@@ -6,10 +6,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasApiTokens, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -21,8 +22,9 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'last_name',
+        'nationality_id',
+        'identity_number',
         'birthday',
-        'nacionalidad_id',
         'rol_id',
         'phone',
         'email',
@@ -34,8 +36,8 @@ class User extends Authenticatable
     public function rol(){
         return $this->belongsTo(Rol::class, 'rol_id', 'id');
     }
-    public function nacionalidad(){
-        return $this->belongsTo(nacionalidad::class, 'nacionalidad_id', 'id');
+    public function nationality(){
+        return $this->belongsTo(Nationality::class, 'nationality_id', 'id');
     }
 
     /**

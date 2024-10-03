@@ -10,7 +10,7 @@ class rol extends Model
     use HasFactory;
     protected $table = 'rols';
     protected $primaryKey = 'id';
-    protected $fillable = ['nombre'];
+    protected $fillable = ['name'];
     public $timestamps=false;
 
     public function users(){

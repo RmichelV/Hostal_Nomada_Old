@@ -44,16 +44,17 @@ const NavBar = () => {
                         </li>
                         <li><Link to="/services">Servicios</Link></li>
                         <li><Link to="/packages">Paquetes</Link></li>
-                        <li><Link to="/reservations">Reservas</Link></li>
                         {userName ? (
                             <>
-                                <li><Link to="/userUpdate">Hola, {userName}</Link></li>
-                                <li><button className="nav-link" onClick={handleLogout}>Cerrar Sesión</button></li>
+                                <li className='user'><Link to="/userUpdate">Hola, {userName}</Link></li>
+                                <li className='user'><button className="nav-link" onClick={handleLogout}>Cerrar Sesión</button></li>
+                                <li className='user'><Link to="/reservations">Reservas</Link></li>
+
                             </>
                         ) : (
                             <>
-                                <li><Link to="/login">Iniciar Sesión</Link></li>
-                                <li><Link to="/register">Registrarse</Link></li>
+                                <li className='user'><Link to="/login">Iniciar Sesión</Link></li>
+                                <li className='user'><Link to="/register">Registrarse</Link></li>
                             </>
                         )}
                     </ul>
@@ -79,7 +80,7 @@ const NavBar = () => {
                     </li>
                     <li><Link to="/services">Servicios</Link></li>
                     <li><Link to="/packages">Paquetes</Link></li>
-                    <li><Link to="/reservations">Reservas</Link></li>
+                    {/* <li><Link to="/reservations">Reservas</Link></li> */}
                     {/* {userName ? (
                         <>
                             <li className="user"><Link to="/userUpdate">Hola, {userName}</Link></li>
@@ -99,6 +100,8 @@ const NavBar = () => {
                         <>
                             <li className="user"><Link to="/userUpdate">Hola, {userName}</Link></li>
                             <li className="user"><button className="nav-link" onClick={handleLogout}>Cerrar Sesión</button></li>
+                            <li className='user'><Link to="/reservations">Reservas</Link></li>
+
                         </>
                     ) : (
                         <>

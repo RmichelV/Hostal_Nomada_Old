@@ -34,13 +34,14 @@ class ReservationController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'user_id'=>'required|exists:users,id',
             'entry_date' => 'required|date',
             'depature_date' => 'required|date',
             'rooms' => 'required|array', 
         ]);
     
         $reservation = Reservation::create([
-            'user_id' => Auth::id(), 
+            'user_id' => $validated['user_id'], // ID del usuario autenticado
             'entry_date' => $validated['entry_date'],
             'depature_date' => $validated['depature_date'],
         ]);
@@ -50,8 +51,6 @@ class ReservationController extends Controller
     
         return response()->json(['message' => 'Reserva creada exitosamente'], 201);
     }
-    
-
 
     public function show($id)
     {
@@ -100,15 +99,22 @@ class ReservationController extends Controller
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
+
     public function getUserReservations()
-{
-    $user = Auth::user();
+    {
+        try {
+            $user = Auth::user(); // Obtener usuario autenticado
 
-    $reservations = Reservation::with('rooms')
-                                ->where('user_id', 1)
-                                ->get();
+            $reservations = Reservation::with('rooms')
+                                       ->where('user_id', Auth::id()) // Obtener reservas del usuario autenticado
+                                       ->get();
 
-    return response()->json(['data' => $reservations], 200);
-}
-
+            return response()->json(['data' => $reservations], 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => 'Error retrieving user reservations',
+                'status' => Response::HTTP_INTERNAL_SERVER_ERROR,
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
 }

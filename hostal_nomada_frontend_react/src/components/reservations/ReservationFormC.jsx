@@ -1,7 +1,11 @@
-import { useState, useEffect } from 'react'; 
+import React ,{ useState, useEffect } from 'react'; 
 
 const ReservationForm = () => {
+  const userId = localStorage.getItem('userId');
+  const userName = localStorage.getItem('userName');// Función para obtener las habitaciones disponibles
+  
   const [formData, setFormData] = useState({
+    id:userId,
     entryDate: '',
     entryTime: '',
     departureDate: '',
@@ -13,8 +17,6 @@ const ReservationForm = () => {
   const [availableRooms, setAvailableRooms] = useState([]);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
-
-  // Función para obtener las habitaciones disponibles
   const fetchAvailableRooms = async () => {
     const { entryDate, entryTime, departureDate, departureTime } = formData;
     if (entryDate && entryTime && departureDate && departureTime) {
@@ -59,11 +61,21 @@ const ReservationForm = () => {
     setErrorMessage(null);
 
     const reservationData = {
+      user_id:userId,
       entry_date: `${formData.entryDate} ${formData.entryTime}`,
       depature_date: `${formData.departureDate} ${formData.departureTime}`,
       rooms: formData.selectedRooms
     };
-
+    const addRoom = () => {
+      if (formData.room && !formData.selectedRooms.includes(formData.room)) {
+        setFormData({
+          ...formData,
+          selectedRooms: [...formData.selectedRooms, formData.room],
+          room: ''
+        });
+      }
+    };
+    
     try {
       const response = await fetch('http://127.0.0.1:8000/api/reservations', {
         method: 'POST',
@@ -79,6 +91,7 @@ const ReservationForm = () => {
         alert('Reserva creada exitosamente');
         // Reiniciar el formulario si es necesario
         setFormData({
+          id:userId,
           entryDate: '',
           entryTime: '',
           departureDate: '',
@@ -90,15 +103,21 @@ const ReservationForm = () => {
         setErrorMessage(result.message || 'Ocurrió un error al crear la reserva');
       }
     } catch (error) {
-      setErrorMessage('Error al crear la reserva,INICIE SESIÓN e intente de nuevo.');
+      if(userId==null){      
+        setErrorMessage(`No está autenticado, inicie sesión e inténtelo de nuevo`);
+      }
+      setErrorMessage(`'Error al crear la reserva,e intente de nuevo. '${error}`);
     } finally {
       setLoading(false);
     }
   };
 
   return (
+    
     <form onSubmit={handleSubmit} className="flex flex-col space-y-4 p-4 bg-white rounded-lg shadow-lg max-w-xs mx-auto">
+      
       <div className="flex space-x-2">
+     
         <div>
           <label>Entrada</label>
           <input
@@ -160,6 +179,7 @@ const ReservationForm = () => {
           <li key={index} className="p-2 bg-gray-100 rounded-lg mt-2">
             {room}
           </li>
+          
         ))}
       </ul>
 

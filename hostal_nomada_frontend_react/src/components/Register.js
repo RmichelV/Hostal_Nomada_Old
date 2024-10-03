@@ -68,7 +68,9 @@ const Register = () => {
             <form onSubmit={handleSubmit} className='form-register'>
 
                 <div>
-                    <label>Nombre:</label>
+                    <label
+                    className='label-register'
+                    >Nombre:</label>
                     <input
                         className='input-register'
                         type="text"
@@ -77,11 +79,14 @@ const Register = () => {
                         onChange={handleChange}
                         required
                     />
-                    {errors.name && <p>{errors.name[0]}</p>}
+                    {errors.name && <p className='error-message'>{errors.name[0]}</p>}
                 </div>
 
                 <div>
-                    <label>Apellido:</label>
+                    <label
+                    className='label-register'>
+                        Apellido:
+                    </label>
                     <input
                         className='input-register'
                         type="text"
@@ -90,16 +95,20 @@ const Register = () => {
                         onChange={handleChange}
                         required
                     />
-                    {errors.last_name && <p>{errors.last_name[0]}</p>}
+                    {errors.last_name && <p className='error-message'>{errors.last_name[0]}</p>}
                 </div>
 
                 <div>
-                    <label>País de origen:</label>
+                    <label
+                    className='label-register'
+                    >País de origen:</label>
                     <NationalitySelect onChange={handleNationalityChange} />
                 </div>
 
                 <div>
-                    <label>Número de Identidad:</label>
+                    <label
+                    className='label-register'
+                    >Número de Identidad:</label>
                     <input
                         className='input-register'
                         type="text"
@@ -108,11 +117,13 @@ const Register = () => {
                         onChange={handleChange}
                         pattern="[0-9]*" // Solo permite números
                     />
-                    {errors.identity_number && <p>{errors.identity_number[0]}</p>}
+                    {errors.identity_number && <p className='error-message'>{errors.identity_number[0]}</p>}
                 </div>
 
                 <div>
-                    <label>Fecha de Nacimiento:</label>
+                    <label
+                    className='label-register'
+                    >Fecha de Nacimiento:</label>
                     <input
                         className='input-register'
                         type="date"
@@ -121,11 +132,13 @@ const Register = () => {
                         onChange={handleChange}
                         required
                     />
-                    {errors.birthday && <p>{errors.birthday[0]}</p>}
+                    {errors.birthday && <p  className='error-message'>{errors.birthday[0]}</p>}
                 </div>
 
                 <div>
-                    <label>Teléfono:</label>
+                    <label
+                    className='label-register'
+                    >Teléfono:</label>
                     <input
                         className='input-register'
                         type="text"
@@ -135,11 +148,13 @@ const Register = () => {
                         required
                         pattern="[0-9]*" // Solo permite números
                     />
-                    {errors.phone && <p>{errors.phone[0]}</p>}
+                    {errors.phone && <p  className='error-message'>{errors.phone[0]}</p>}
                 </div>
 
                 <div>
-                    <label>Email:</label>
+                    <label
+                    className='label-register'
+                    >Email:</label>
                     <input
                         className='input-register'
                         type="email"
@@ -148,11 +163,13 @@ const Register = () => {
                         onChange={handleChange}
                         required
                     />
-                    {errors.email && <p>{errors.email[0]}</p>}
+                    {errors.email && <p  className='error-message'>{errors.email[0]}</p>}
                 </div>
 
                 <div>
-                    <label>Contraseña:</label>
+                    <label
+                    className='label-register'
+                    >Contraseña:</label>
                     <input
                         className='input-register'
                         type="password"
@@ -161,11 +178,13 @@ const Register = () => {
                         onChange={handleChange}
                         required
                     />
-                    {errors.password && <p>{errors.password[0]}</p>}
+                    {errors.password && <p className='error-message'>{errors.password[0]}</p>}
                 </div>
 
                 <div>
-                    <label>Confirmar Contraseña:</label>
+                    <label
+                    className='label-register'
+                    >Confirmar Contraseña:</label>
                     <input
                         className='input-register'
                         type="password"
@@ -174,7 +193,7 @@ const Register = () => {
                         onChange={handleChange}
                         required
                     />
-                    {errors.confirmPassword && <p>{errors.confirmPassword[0]}</p>}
+                    {errors.confirmPassword && <p className='error-message'>{errors.confirmPassword[0]}</p>}
                 </div>
                 <div className='form-button-register'>
                     <button type="submit">Registrar</button>

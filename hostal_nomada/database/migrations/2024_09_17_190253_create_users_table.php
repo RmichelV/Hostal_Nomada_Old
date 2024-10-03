@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('last_name');
+            $table->unsignedBigInteger('nationality_id')->nullable(); 
+            $table->integer('identity_number');
             $table->dateTime('birthday');
-            $table->unsignedBigInteger('nacionalidad_id')->nullable(); 
             $table->unsignedBigInteger('rol_id')->nullable(); 
             $table->integer('phone')->nullable();
             $table->string('email')->unique();
@@ -27,7 +28,7 @@ return new class extends Migration
 
             //claves foraneas
             $table->foreign('rol_id')->references('id')->on('rols')->onDelete('cascade');
-            $table->foreign('nacionalidad_id')->references('id')->on('nacionalidades')->onDelete('cascade');
+            $table->foreign('nationality_id')->references('id')->on('nationalities')->onDelete('cascade');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

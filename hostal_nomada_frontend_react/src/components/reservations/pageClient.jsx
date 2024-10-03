@@ -7,7 +7,7 @@ const PageClient = () => {
 
   return (
     <>
-    <UserReservations/>
+    {/* <UserReservations/> */}
     <ReservationForm/>
 
     </>
